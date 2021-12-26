@@ -197,7 +197,7 @@ NeuralNetwork.prototype.backpropagate = function(X, Y, learningRate=0.01) {
         let nextLayer = this.layers[i + 1];
         
         // find the activation derivative and the change in cost with respect to the subsequent error
-        let activationDerivative = this.layers[i].activation(outputs[i], derivative=true); // use identity
+        let activationDerivative = this.layers[i].activation(outputs[i], derivative=true); 
         console.log(errors[0])
         let dCda = math.transpose(math.multiply(nextLayer.weights, math.transpose(errors[0])));
         
@@ -259,8 +259,8 @@ NeuralNetwork.prototype.backpropagate = function(X, Y, learningRate=0.01) {
 
 net = new NeuralNetwork();
 net.addLayer(2);
-net.addLayer(2);
-net.addLayer(1, activation="sigmoid", error="crossEntropy");
+net.addLayer(2, activation="sigmoid");
+net.addLayer(1, activation="sigmoid", error="mse");
 
 X = math.matrix(
     [[0, 0], [1, 1], [1, 0], [0, 1]]

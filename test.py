@@ -1,24 +1,3 @@
-
-
-match = 12000
- 
-site = 'amazon'
- 
-print("%s is so useful. I tried to look\
-up mobile and they had a nice one that cost %d rupees." % (site, match))
-
-
-# make a variable called name and set it to your name here:
-
-# WRITE YOUR CODE HERE
-
-# 
-
-
-
-
-
-
 import numpy as np
 
 # define the sigmoid function
